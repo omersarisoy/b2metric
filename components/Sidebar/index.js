@@ -10,9 +10,7 @@ const menuItems = [
 ];
 
 function Sidebar() {
-  // get path from url
   const pathname = usePathname();
-  // remove slash from path
   const path = pathname.replace("/", "");
 
   return (
