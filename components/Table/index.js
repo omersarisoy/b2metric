@@ -1,39 +1,30 @@
 import React from "react";
 
+const tableTitle = [
+  {id:1, name: "User Details"},
+  {id:2, name: "Customer name"},
+  {id:3, name: "Register Date"},
+  {id:4, name: "Segment"}
+]
 function Table({currentPosts}) {
   return (
-    <div className="flex flex-col border border-gray-initial rounded-lg">
+    <div className="flex w-full bg-white overflow-x-auto flex-col border border-gray-initial rounded-lg">
       <h1 className="p-8 text-xl font-bold text-black">All User</h1>
-      <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
-        <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+      <div className="overflow-x-auto -mx-6 lg:-mx-8">
+        <div className="inline-block min-w-full py-2 px-6 lg:px-8">
           <div className="overflow-hidden">
             <table className="min-w-full text-left text-sm font-light">
               <thead className="border-b border-gray-initial">
                 <tr>
-                  <th
-                    scope="col"
-                    className="px-10 py-3 text-xs text-gray-scale font-bold "
-                  >
-                    User Details
+                  {tableTitle.map(item => (
+                    <th
+                      key={item.id}
+                      scope="col"
+                      className="px-6 py-3 text-xs text-gray-scale font-bold "
+                    >
+                    {item.name}
                   </th>
-                  <th
-                    scope="col"
-                    className="px-10 py-3 text-xs text-gray-scale font-bold "
-                  >
-                    Customer name
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-10 py-3 text-xs text-gray-scale font-bold "
-                  >
-                    Register Date
-                  </th>
-                  <th
-                    scope="col"
-                    className="px-10 py-3 text-xs text-gray-scale font-bold "
-                  >
-                    Segment
-                  </th>
+                  ))}
                 </tr>
               </thead>
               <tbody>

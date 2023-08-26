@@ -1,7 +1,6 @@
 "use client";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
-import { Providers } from "@/store/providers";
 import { Mulish } from "next/font/google";
 import { usePathname } from "next/navigation";
 import "./globals.css";
@@ -21,15 +20,13 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <Providers>
-        <body className={`${mulish.className} bg-dark h-screen flex items-center justify-center`}>
+        <body className={`${mulish.className}  h-screen flex items-center justify-center`}>
           {pathName !== "/" && <Sidebar />}
-          <main className="flex flex-col h-full flex-1">
+          <main className={`${'flex flex-col h-full w-full'} ${pathName === '/'? 'bg-dark' : 'bg-overviewBg'}`}>
             {pathName !== "/" && <Navbar />}
             {children}
           </main>
         </body>
-      </Providers>
     </html>
   );
 }

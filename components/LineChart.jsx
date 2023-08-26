@@ -1,5 +1,4 @@
 "use client";
-
 import {
   CategoryScale,
   Chart as ChartJS,
@@ -14,7 +13,6 @@ import {
 } from "chart.js";
 import faker from "faker";
 import { Line } from "react-chartjs-2";
-
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend,Filler,SubTitle);
 
@@ -65,7 +63,7 @@ export const options = {
   }},
 };
 
-const labels = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
+const labels = Array.from(Array(23).keys());
 
 export const data = {
   type: 'line',
@@ -86,22 +84,22 @@ export const data = {
       pointStyle:false,
       borderWidth:2
     },
-      {
-      label: "Yesterday",
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 60 })),
-      fill: true,
-      borderColor: '#DFE0EB',
-      fill: true,
-      backgroundColor: ({chart: {ctx}}) => {
-        const bg = ctx.createLinearGradient(255, 255, 255, 0.00);
-        bg.addColorStop(0, "#f1f2f4");
-        bg.addColorStop(1, "#ffff");
-        return bg;
-      },      
-      tension: 0.5,
-      pointStyle:false,
-      borderWidth:2
-    },
+    {
+    label: "Yesterday",
+    data: labels.map(() => faker.datatype.number({ min: 0, max: 60 })),
+    fill: true,
+    borderColor: '#DFE0EB',
+    fill: true,
+    backgroundColor: ({chart: {ctx}}) => {
+      const bg = ctx.createLinearGradient(255, 255, 255, 0.00);
+      bg.addColorStop(0, "#f1f2f4");
+      bg.addColorStop(1, "#ffff");
+      return bg;
+    },      
+    tension: 0.5,
+    pointStyle:false,
+
+  },
   ],
 };
 

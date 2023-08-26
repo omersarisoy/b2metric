@@ -19,26 +19,29 @@ const chartMetrix = [
 
 function Dashboard() {
   return (
-    <div className="bg-overviewBg px-7 w-full h-full flex flex-col border-none">
-      <div className="flex align-center justify-between py-6 h-[180px]">
+    <div className="flex flex-col px-8 bg-overviewBg">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {topMetric.map(({ title, value }) => (
           <div
             key={title}
-            className="group border border-gray-initial bg-white px-8 flex flex-col justify-center items-center rounded-lg hover:border-blue transition-all cursor-pointer"
+            className="group border border-gray-initial bg-white px-8 py-6 flex flex-col justify-center items-center rounded-lg hover:border-blue transition-all cursor-pointer"
           >
-            <p className="text-xl font-bold text-gray-scale pb-3  group-hover:text-blue">{title}</p>
-            <p className="text-[40px] text-black font-bold  group-hover:text-blue">{value}</p>
+            <p className="text-xl font-bold text-gray-scale pb-3 group-hover:text-blue">{title}</p>
+            <p className="text-4xl text-black font-bold group-hover:text-blue">{value}</p>
           </div>
         ))}
       </div>
-
-      <div className="flex gap-10  bg-white m-4 md:flex-row">
-        <div className="flex-1 pl-8 pt-8  border-gray-lightest">
+      <div className="flex flex-col lg:flex-row rounded-lg lg:mt-8 bg-white border border-gray-initial">
+        <div className="w-5/6 mx-auto lg:p-8">
           <LineCharts />
         </div>
-        <div className="">
+        <div>
           {chartMetrix.map(({ title, value }) => (
-            <ChartMetrixCard key={title} title={title} value={value} />
+            <ChartMetrixCard
+              key={title}
+              title={title}
+              value={value}
+            />
           ))}
         </div>
       </div>

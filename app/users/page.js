@@ -26,7 +26,7 @@ function Users() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
-    <div className="bg-white w-full h-full px-7">
+    <div className="flex flex-col  items-end bg-overviewBg h-full w-full px-4 lg:px-8">
       <Table currentPosts={currentPosts} />
       <Pagination
         postsPerPage={postsPerPage}

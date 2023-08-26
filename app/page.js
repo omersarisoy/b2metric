@@ -15,9 +15,7 @@ export default function Home() {
     email: "",
     password: "",
   });
-
   const router = useRouter();
-
 
   const onChangeHandler = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -25,9 +23,7 @@ export default function Home() {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    // save user email to local storage
     localStorage.setItem("userEmail", formData.email);
-    
     if (
         formData.email === savedCredentials.email &&
         formData.password === savedCredentials.password
@@ -41,16 +37,11 @@ export default function Home() {
       <div className="w-12 h-12 rounded-full bg-blue"></div>
       <h3 className="text-gray-light text-lg font-bold leading-6 pt-3 pb-5">B2Metric</h3>
       <h1 className="text-gray-dark text-2xl font-bold leading-8 py-3">Log In to B2Metric</h1>
-      <p className="text-gray-scale text-sm font-normal leading-5">
-        Enter your email and password below
-      </p>
-
+      <p className="text-gray-scale text-sm font-normal leading-5">Enter your email and password below</p>
       <div className="mt-10 w-full">
         <form className="space-y-6">
           <div>
-            <label htmlFor="email" className="text-xs font-bold text-gray-scale">
-              EMAIL
-            </label>
+            <label htmlFor="email" className="text-xs font-bold text-gray-scale">EMAIL</label>
             <div className="mt-1.5">
               <input
                 id="email"
@@ -65,9 +56,7 @@ export default function Home() {
             </div>
           </div>
           <div>
-            <label htmlFor="password" className="text-xs font-bold text-gray-scale">
-              PASSWORD
-            </label>
+            <label htmlFor="password" className="text-xs font-bold text-gray-scale">PASSWORD</label>
             <div className="mt-1.5 relative">
               <input
                 id="password"
@@ -92,7 +81,6 @@ export default function Home() {
               )}
             </div>
           </div>
-
           <div>
             <button
               onClick={onSubmitHandler}
@@ -102,7 +90,6 @@ export default function Home() {
             </button>
           </div>
         </form>
-
         <p className="mt-8 text-center text-sm text-gray-scale">
           Don’t have an account?
           <a href="#" className="font-semibold text-sm leading-6 text-blue ml-2">
