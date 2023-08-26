@@ -553,9 +553,6 @@ video {
 .h-12 {
   height: 3rem;
 }
-.h-20 {
-  height: 5rem;
-}
 .h-8 {
   height: 2rem;
 }
@@ -666,9 +663,6 @@ video {
 .border-l-2 {
   border-left-width: 2px;
 }
-.border-none {
-  border-style: none;
-}
 .border-blue {
   --tw-border-opacity: 1;
   border-color: rgb(55 81 255 / var(--tw-border-opacity));
@@ -718,9 +712,6 @@ video {
 }
 .p-0\.5 {
   padding: 0.125rem;
-}
-.p-6 {
-  padding: 1.5rem;
 }
 .p-8 {
   padding: 2rem;
@@ -773,27 +764,17 @@ video {
   padding-top: 2.25rem;
   padding-bottom: 2.25rem;
 }
-.py-8 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
 .pb-3 {
   padding-bottom: 0.75rem;
 }
 .pb-5 {
   padding-bottom: 1.25rem;
 }
-.pt-10 {
-  padding-top: 2.5rem;
-}
 .pt-16 {
   padding-top: 4rem;
 }
 .pt-3 {
   padding-top: 0.75rem;
-}
-.pt-8 {
-  padding-top: 2rem;
 }
 .text-left {
   text-align: left;
@@ -982,10 +963,6 @@ html{
     margin-right: -2rem;
   }
 
-  .lg\:mt-10 {
-    margin-top: 2.5rem;
-  }
-
   .lg\:mt-8 {
     margin-top: 2rem;
   }
@@ -998,24 +975,12 @@ html{
     display: none;
   }
 
-  .lg\:flex-1 {
-    flex: 1 1 0%;
-  }
-
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .lg\:flex-row {
     flex-direction: row;
-  }
-
-  .lg\:p-12 {
-    padding: 3rem;
-  }
-
-  .lg\:p-1 {
-    padding: 0.25rem;
   }
 
   .lg\:p-8 {
@@ -1027,31 +992,9 @@ html{
     padding-right: 2rem;
   }
 
-  .lg\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .lg\:px-9 {
-    padding-left: 2.25rem;
-    padding-right: 2.25rem;
-  }
-
   .lg\:py-7 {
     padding-top: 1.75rem;
     padding-bottom: 1.75rem;
-  }
-
-  .lg\:pl-8 {
-    padding-left: 2rem;
-  }
-
-  .lg\:pr-8 {
-    padding-right: 2rem;
-  }
-
-  .lg\:pb-8 {
-    padding-bottom: 2rem;
   }
 }
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\

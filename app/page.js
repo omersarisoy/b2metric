@@ -29,6 +29,8 @@ export default function Home() {
         formData.password === savedCredentials.password
       ) {
       router.push("/dashboard");
+    } else {
+      alert('email:b2metric@gmail.com password:b2metric')
     }
   };
 
