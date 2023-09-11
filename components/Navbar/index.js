@@ -8,7 +8,7 @@ import Link from "next/link";
 import { OverviewIcon, UserIcon } from "../icons";
 
 function Navbar() {
-  const [email, setEmail] = useState(localStorage.getItem('userEmail') || '')  
+  const [email, setEmail] = useState(typeof window !== "undefined" ? window.localStorage.getItem('userEmail') : false || '')  
   const [open, setOpen] = useState(false)
   const router = useRouter();
   const pathName = usePathname()
@@ -37,7 +37,7 @@ function Navbar() {
         <LogOut 
           className="cursor-pointer" 
           onClick={() => {
-            localStorage.removeItem('userEmail')
+            typeof window !== "undefined" ? window.localStorage.removeItem('userEmail') : false
             setEmail('')
           }}/>
         <div className="items-center gap-3 hidden lg:flex">

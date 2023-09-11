@@ -23,7 +23,7 @@ export default function Home() {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
-    localStorage.setItem("userEmail", formData.email);
+    typeof window !== "undefined" ? window.localStorage.setItem("userEmail", formData.email) : false;
     if (
         formData.email === savedCredentials.email &&
         formData.password === savedCredentials.password
